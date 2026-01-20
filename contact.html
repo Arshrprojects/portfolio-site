@@ -5,6 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | ARSH RAJESH</title>
   <link rel="stylesheet" href="css/style.css?v=2">
+  <style>
+    .social{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 14px 0 6px;
+    }
+
+    .icon-link{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(0,0,0,0.08);
+      color: #1d1d1f;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      transition: transform 0.10s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .icon-link:hover{
+      transform: translateY(-1px);
+      border-color: rgba(10,132,255,0.35);
+      box-shadow: 0 10px 22px rgba(10,132,255,0.14);
+      text-decoration: none;
+    }
+
+    .icon-link:active{
+      transform: translateY(0px);
+    }
+
+    .icon-link img{
+      width: 22px;
+      height: 22px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .icon-sub{
+      margin-left: auto;
+      color: #6e6e73;
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .contact-card{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .contact-mini{
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    }
+
+    .contact-mini h3{
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-mini p{
+      margin: 0;
+      color: #1d1d1f;
+    }
+
+    .contact-mini a{
+      color: #0a84ff;
+    }
+
+    @media (min-width: 900px){
+      .contact-card{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="wrapper">
@@ -23,52 +107,49 @@
       <section class="content-area">
         <h2>Professional Details</h2>
         <p>
-          Feel free to reach out through any of the channels below. I’m open to collaboration, project discussions,
-          and cloud/devops opportunities.
+          Feel free to reach out for collaborations, project discussions, or opportunities related to
+          <span class="highlight">Cloud</span>, <span class="highlight">DevOps</span>, and <span class="highlight">Pre-Sales</span>.
         </p>
 
-        <p><strong>Email:</strong> <a href="mailto:arshrajesh1234@gmail.com">arshrajesh1234@gmail.com</a></p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:arshrajesh1234@gmail.com">arshrajesh1234@gmail.com</a>
+        </p>
 
         <div class="social">
           <a class="icon-link" href="https://github.com/Arshrprojects" target="_blank" rel="noopener">
-            <img src="images/github.png" alt="GitHub">
+            <img src="images/Github.jpg" alt="GitHub">
             GitHub
+            <span class="icon-sub">@Arshrprojects</span>
           </a>
 
           <a class="icon-link" href="https://www.linkedin.com/in/arshrajesh/" target="_blank" rel="noopener">
             <img src="images/linkedin.png" alt="LinkedIn">
             LinkedIn
+            <span class="icon-sub">/in/arshrajesh</span>
           </a>
 
           <a class="icon-link" href="https://www.youtube.com/@arshrajesh1234" target="_blank" rel="noopener">
-            <img src="images/github.png" alt="YouTube">
+            <img src="images/Github.jpg" alt="YouTube">
             YouTube
+            <span class="icon-sub">@arshrajesh1234</span>
           </a>
         </div>
 
-        <div class="grid">
-          <div class="card">
+        <div class="contact-card">
+          <div class="contact-mini">
             <h3>Best way to reach me</h3>
-            <p>
-              Email is the fastest option for detailed questions. For quick updates and networking, LinkedIn works best.
-            </p>
+            <p>Email is best for detailed requests. LinkedIn is great for quick networking.</p>
           </div>
 
-          <div class="card">
+          <div class="contact-mini">
             <h3>What I can help with</h3>
-            <ul>
-              <li>Cloud & DevOps learning guidance and project collaboration</li>
-              <li>Portfolio/project reviews and documentation</li>
-              <li>Pre-sales style solution explanation and presentations</li>
-            </ul>
+            <p>Cloud/DevOps learning, project collaboration, and presenting solutions clearly.</p>
           </div>
 
-          <div class="card">
+          <div class="contact-mini">
             <h3>Explore my work</h3>
-            <p>
-              View my projects on the <a href="portfolio.html">Portfolio</a> page or browse my repositories on
-              <a href="https://github.com/Arshrprojects" target="_blank" rel="noopener">GitHub</a>.
-            </p>
+            <p>Visit the <a href="portfolio.html">Portfolio</a> page to view my projects and highlights.</p>
           </div>
         </div>
       </section>
