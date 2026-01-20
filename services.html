@@ -3,13 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Portfolio</title>
+  <title>Services | ARSH RAJESH</title>
   <link rel="stylesheet" href="css/style.css?v=2">
+  <style>
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width:980px){
+      .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    @media (max-width:640px){
+      .service-grid{grid-template-columns:1fr;}
+    }
+    .service-card{
+      background:rgba(255,255,255,0.85);
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:16px;
+      padding:14px;
+      box-shadow:0 8px 18px rgba(0,0,0,0.06);
+    }
+    .service-card h3{
+      margin:8px 0;
+      letter-spacing:-0.01em;
+    }
+    .service-card ul{
+      margin:10px 0 0;
+      padding-left:18px;
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+    .pill{
+      display:inline-block;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,0.08);
+      background:rgba(255,255,255,0.75);
+      font-weight:700;
+      color:#1d1d1f;
+      text-decoration:none;
+    }
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .cta{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(10,132,255,0.28);
+      background:rgba(255,255,255,0.75);
+      font-weight:800;
+      text-decoration:none;
+      color:#1d1d1f;
+      box-shadow:0 8px 18px rgba(10,132,255,0.10);
+      transition:transform 0.10s ease, box-shadow 0.18s ease;
+    }
+    .cta:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 22px rgba(10,132,255,0.14);
+      text-decoration:none;
+    }
+  </style>
 </head>
 <body>
   <div class="wrapper">
     <header>
-      <h1>Contact <span class="highlight">Me</span></h1>
+      <h1>My <span class="highlight">Services</span></h1>
       <nav aria-label="Main Navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
@@ -21,48 +89,112 @@
 
     <main>
       <section class="content-area">
-        <h2>Professional Details</h2>
-        <p>Feel free to reach out using any of the links below. Replace the placeholder links with your real accounts.</p>
+        <h2>What I offer</h2>
+        <p>
+          I focus on <span class="highlight">Cloud</span>, <span class="highlight">DevOps</span>, and
+          <span class="highlight">Cloud Pre-Sales</span>. I enjoy building practical solutions, documenting them clearly,
+          and explaining them in a way that makes sense to both technical and non-technical stakeholders.
+        </p>
 
-        <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-
-        <div class="social">
-          <a class="icon-link" href="https://github.com/yourusername" target="_blank">
-            <img src="images/github.png" alt="GitHub">GitHub Profile
-          </a>
-
-          <a class="icon-link" href="https://www.linkedin.com/in/yourusername/" target="_blank">
-            <img src="images/linkedin.png" alt="LinkedIn">LinkedIn Profile
-          </a>
-
-          <a class="icon-link" href="https://www.youtube.com/" target="_blank">
-            <img src="images/github.png" alt="YouTube">YouTube Channel
-          </a>
+        <div class="pill-row">
+          <span class="pill">Cloud Foundations</span>
+          <span class="pill">DevOps Workflows</span>
+          <span class="pill">Solution Design</span>
+          <span class="pill">Pre-Sales Demos</span>
+          <span class="pill">Documentation</span>
+          <span class="pill">Presentation</span>
         </div>
 
-        <div class="grid">
-          <div class="card">
-            <h3>External Link Example</h3>
-            <p>Here’s an external link to documentation: <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></p>
+        <div class="service-grid">
+          <div class="service-card">
+            <h3>Cloud Setup & Architecture Basics</h3>
+            <p>
+              Help with cloud concepts and structuring a clean approach to environments, security basics, and services.
+            </p>
+            <ul>
+              <li>Cloud fundamentals and service mapping</li>
+              <li>Basic architecture planning and documentation</li>
+              <li>Security and reliability mindset</li>
+            </ul>
           </div>
 
-          <div class="card">
-            <h3>Internal Link Example</h3>
-            <p>Want to see my work? Visit the <a href="portfolio.html">Portfolio</a> page.</p>
+          <div class="service-card">
+            <h3>DevOps & Automation Support</h3>
+            <p>
+              Practical workflow guidance for building, deploying, and maintaining projects with clean processes.
+            </p>
+            <ul>
+              <li>CI/CD concepts and simple pipelines</li>
+              <li>Automation thinking and repeatable steps</li>
+              <li>Deployment-style structure for projects</li>
+            </ul>
           </div>
+
+          <div class="service-card">
+            <h3>Cloud Pre-Sales (Explaining Solutions)</h3>
+            <p>
+              Turning technical work into clear business value—how it works, why it matters, and how to present it well.
+            </p>
+            <ul>
+              <li>Problem → Solution → Impact framing</li>
+              <li>Client-friendly explanations and slides</li>
+              <li>Demo prep and crisp walkthroughs</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Project Packaging for GitHub</h3>
+            <p>
+              Making your projects look clean and professional for reviews, interviews, and portfolios.
+            </p>
+            <ul>
+              <li>Repo structure and naming cleanup</li>
+              <li>README and documentation improvements</li>
+              <li>Clear results and screenshots</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Technical Writing & Documentation</h3>
+            <p>
+              Clear and structured docs that are easy to follow and look professional.
+            </p>
+            <ul>
+              <li>Setup guides and step-by-step how-tos</li>
+              <li>Architecture notes and explanations</li>
+              <li>Project summaries for submission</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <h3>Communication & Presentation</h3>
+            <p>
+              Explaining your work confidently for demos, reviews, and stakeholder conversations.
+            </p>
+            <ul>
+              <li>2–3 minute project pitch structure</li>
+              <li>Demo flow and Q&A preparation</li>
+              <li>Clear, simple explanations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="cta" href="portfolio.html">View Projects</a>
+          <a class="cta" href="contact.html">Contact Me</a>
         </div>
       </section>
 
       <aside>
         <h2>Availability</h2>
         <p>I usually reply within 24–48 hours.</p>
+        <p class="muted">For collaboration, demos, or project walkthroughs—use the Contact page.</p>
       </aside>
     </main>
 
     <footer>
-      <p>&copy; 2026 Your Name</p>
+      <p>&copy; 2026 ARSH RAJESH</p>
     </footer>
   </div>
 </body>
 </html>
-
